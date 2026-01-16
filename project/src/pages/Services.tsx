@@ -1,6 +1,7 @@
 import { Plane, Globe, Shield, Users, CheckCircle } from 'lucide-react';
 import ckcImage from '../images/ckc.jpg';
 import kaabaImage from '../images/kaaba.jpeg';
+import privateJetImage from '../images/privatejet.jpeg';
 
 export default function Services() {
   const services = [
@@ -15,7 +16,7 @@ export default function Services() {
         'Cargo charter services',
         'Group travel arrangements',
       ],
-      image: 'https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: privateJetImage,
     },
     {
       icon: Globe,
@@ -116,13 +117,14 @@ export default function Services() {
                     </ul>
                   </div>
 
-                  <div className={`relative h-[400px] rounded-xl overflow-hidden shadow-2xl ${
+                  <div className={`relative h-[400px] w-full rounded-xl overflow-hidden shadow-2xl bg-gray-200 dark:bg-gray-800 ${
                     isEven ? 'lg:order-2' : 'lg:order-1'
                   }`}>
                     <img
                       src={service.image}
                       alt={service.title}
                       className="w-full h-full object-cover"
+                      style={{ objectPosition: 'center' }}
                     />
                   </div>
                 </div>

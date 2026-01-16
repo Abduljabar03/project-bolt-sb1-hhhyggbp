@@ -1,5 +1,6 @@
 import { Plane, Globe, Shield, Users, ArrowRight } from 'lucide-react';
 import { useEffect, useRef } from 'react';
+import ourVisionMissionImage from '../images/ourvisionourmission.jpeg';
 
 interface HomeProps {
   onNavigate: (page: string) => void;
@@ -169,7 +170,7 @@ export default function Home({ onNavigate }: HomeProps) {
 
             <div className="relative h-[400px] rounded-xl overflow-hidden shadow-2xl dark:shadow-xl dark:shadow-black/50">
               <img
-                src="https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                src={ourVisionMissionImage}
                 alt="Aircraft"
                 className="w-full h-full object-cover"
               />
