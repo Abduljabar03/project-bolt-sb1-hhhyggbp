@@ -29,7 +29,7 @@ function AppContent() {
     <div className="min-h-screen bg-white dark:bg-gray-950">
       <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
       <main>{renderPage()}</main>
-      <Footer />
+      <Footer onNavigate={setCurrentPage} />
     </div>
   );
 }

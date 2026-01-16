@@ -1,7 +1,18 @@
 import { Phone, Instagram } from 'lucide-react';
 import NajmLogo from '../images/Najm Logo.svg';
 
-export default function Footer() {
+interface FooterProps {
+  onNavigate?: (page: string) => void;
+}
+
+export default function Footer({ onNavigate }: FooterProps) {
+  const handleNavClick = (page: string) => {
+    if (onNavigate) {
+      onNavigate(page);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-gray-900 dark:bg-gray-950 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -19,10 +30,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-400 dark:text-gray-500 hover:text-[rgba(131,127,250,1)] transition-colors">Home</a></li>
-              <li><a href="#about" className="text-gray-400 dark:text-gray-500 hover:text-[rgba(131,127,250,1)] transition-colors">About Us</a></li>
-              <li><a href="#services" className="text-gray-400 dark:text-gray-500 hover:text-[rgba(131,127,250,1)] transition-colors">Services</a></li>
-              <li><a href="#contact" className="text-gray-400 dark:text-gray-500 hover:text-[rgba(131,127,250,1)] transition-colors">Contact</a></li>
+              <li><button onClick={() => handleNavClick('home')} className="text-gray-400 dark:text-gray-500 hover:text-[rgba(131,127,250,1)] transition-colors cursor-pointer">Home</button></li>
+              <li><button onClick={() => handleNavClick('about')} className="text-gray-400 dark:text-gray-500 hover:text-[rgba(131,127,250,1)] transition-colors cursor-pointer">About Us</button></li>
+              <li><button onClick={() => handleNavClick('services')} className="text-gray-400 dark:text-gray-500 hover:text-[rgba(131,127,250,1)] transition-colors cursor-pointer">Services</button></li>
+              <li><button onClick={() => handleNavClick('contact')} className="text-gray-400 dark:text-gray-500 hover:text-[rgba(131,127,250,1)] transition-colors cursor-pointer">Contact</button></li>
             </ul>
           </div>
 
