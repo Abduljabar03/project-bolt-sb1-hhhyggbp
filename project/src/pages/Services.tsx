@@ -79,7 +79,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="space-y-24">
             {services.map((service, index) => {
@@ -94,13 +94,13 @@ export default function Services() {
                   }`}
                 >
                   <div className={isEven ? 'lg:order-1' : 'lg:order-2'}>
-                    <div className="bg-[rgba(131,127,250,0.1)] w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                    <div className="bg-[rgba(131,127,250,0.1)] dark:bg-[rgba(131,127,250,0.15)] w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                       <Icon className="h-8 w-8 text-[rgba(131,127,250,1)]" />
                     </div>
-                    <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                    <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
                       {service.title}
                     </h2>
-                    <p className="text-lg text-gray-700 leading-relaxed mb-6">
+                    <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
                       {service.description}
                     </p>
                     <ul className="space-y-3">
@@ -110,7 +110,7 @@ export default function Services() {
                           className="flex items-start space-x-3"
                         >
                           <CheckCircle className="h-6 w-6 text-[rgba(131,127,250,1)] flex-shrink-0 mt-0.5" />
-                          <span className="text-gray-700">{feature}</span>
+                          <span className="text-gray-700 dark:text-gray-300">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -132,37 +132,37 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Why Partner With Us?
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               We deliver aviation excellence through commitment to quality and service
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-md text-center">
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md dark:shadow-gray-800 text-center">
               <div className="text-4xl font-bold text-[rgba(131,127,250,1)] mb-2">24/7</div>
-              <div className="text-gray-700 font-semibold mb-2">Availability</div>
-              <div className="text-gray-600 text-sm">Round-the-clock operations and support</div>
+              <div className="text-gray-700 dark:text-gray-300 font-semibold mb-2">Availability</div>
+              <div className="text-gray-600 dark:text-gray-400 text-sm">Round-the-clock operations and support</div>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-md text-center">
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md dark:shadow-gray-800 text-center">
               <div className="text-4xl font-bold text-[rgba(131,127,250,1)] mb-2">100%</div>
-              <div className="text-gray-700 font-semibold mb-2">Safety First</div>
-              <div className="text-gray-600 text-sm">Strict compliance with international standards</div>
+              <div className="text-gray-700 dark:text-gray-300 font-semibold mb-2">Safety First</div>
+              <div className="text-gray-600 dark:text-gray-400 text-sm">Strict compliance with international standards</div>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-md text-center">
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md dark:shadow-gray-800 text-center">
               <div className="text-4xl font-bold text-[rgba(131,127,250,1)] mb-2">Expert</div>
-              <div className="text-gray-700 font-semibold mb-2">Crew</div>
-              <div className="text-gray-600 text-sm">Highly trained and experienced professionals</div>
+              <div className="text-gray-700 dark:text-gray-300 font-semibold mb-2">Crew</div>
+              <div className="text-gray-600 dark:text-gray-400 text-sm">Highly trained and experienced professionals</div>
             </div>
-            <div className="bg-white p-8 rounded-xl shadow-md text-center">
+            <div className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-md dark:shadow-gray-800 text-center">
               <div className="text-4xl font-bold text-[rgba(131,127,250,1)] mb-2">Modern</div>
-              <div className="text-gray-700 font-semibold mb-2">Fleet</div>
-              <div className="text-gray-600 text-sm">Well-maintained aircraft with latest technology</div>
+              <div className="text-gray-700 dark:text-gray-300 font-semibold mb-2">Fleet</div>
+              <div className="text-gray-600 dark:text-gray-400 text-sm">Well-maintained aircraft with latest technology</div>
             </div>
           </div>
         </div>

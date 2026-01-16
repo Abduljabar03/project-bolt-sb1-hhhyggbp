@@ -1,0 +1,8 @@
+{
+  "buildCommand": "cd project && npm run build",
+  "outputDirectory": "project/dist",
+  "devCommand": "cd project && npm run dev",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}

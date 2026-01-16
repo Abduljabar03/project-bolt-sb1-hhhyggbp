@@ -93,10 +93,10 @@ export default function Home({ onNavigate }: HomeProps) {
         />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
             Welcome to Najm Air
           </h1>
-          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed" style={{ fontFamily: "'Times New Roman', Times, serif" }}>
             Your trusted aviation partner delivering safe, efficient, and world-class air transport solutions
           </p>
           <button
@@ -109,11 +109,11 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Services</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Services</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               Comprehensive aviation solutions tailored to your needs
             </p>
           </div>
@@ -124,15 +124,15 @@ export default function Home({ onNavigate }: HomeProps) {
               return (
                 <div
                   key={index}
-                  className="bg-white p-8 rounded-xl border border-gray-200 hover:border-[rgba(131,127,250,1)] hover:shadow-xl transition-all group"
+                  className="bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-[rgba(131,127,250,1)] dark:hover:border-[rgba(131,127,250,1)] hover:shadow-xl dark:hover:shadow-lg dark:hover:shadow-[rgba(131,127,250,0.3)] transition-all group"
                 >
-                  <div className="bg-[rgba(131,127,250,0.1)] w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[rgba(131,127,250,1)] transition-colors">
+                  <div className="bg-[rgba(131,127,250,0.1)] dark:bg-[rgba(131,127,250,0.15)] w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[rgba(131,127,250,1)] dark:group-hover:bg-[rgba(131,127,250,0.8)] transition-colors">
                     <Icon className="h-8 w-8 text-[rgba(131,127,250,1)] group-hover:text-white transition-colors" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -143,7 +143,7 @@ export default function Home({ onNavigate }: HomeProps) {
           <div className="text-center mt-12">
             <button
               onClick={() => onNavigate('services')}
-              className="text-[rgba(131,127,250,1)] font-semibold hover:text-[rgba(111,107,230,1)] transition-colors inline-flex items-center space-x-2"
+              className="text-[rgba(131,127,250,1)] dark:text-[rgba(131,127,250,1)] font-semibold hover:text-[rgba(111,107,230,1)] dark:hover:text-[rgba(131,127,250,0.8)] transition-colors inline-flex items-center space-x-2"
             >
               <span>Learn more about our services</span>
               <ArrowRight className="h-5 w-5" />
@@ -152,22 +152,22 @@ export default function Home({ onNavigate }: HomeProps) {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Vision</h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Our Vision</h2>
+              <p className="text-lg text-gray-700 dark:text-gray-400 leading-relaxed mb-8">
                 To become a trusted and respected aviation partner, delivering safe, efficient, and world-class air transport solutions.
               </p>
 
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Our Mission</h2>
+              <p className="text-lg text-gray-700 dark:text-gray-400 leading-relaxed">
                 To provide dependable charter and ACMI services through operational excellence, strict safety compliance, and customer-focused solutions.
               </p>
             </div>
 
-            <div className="relative h-[400px] rounded-xl overflow-hidden shadow-2xl">
+            <div className="relative h-[400px] rounded-xl overflow-hidden shadow-2xl dark:shadow-xl dark:shadow-black/50">
               <img
                 src="https://images.pexels.com/photos/358319/pexels-photo-358319.jpeg?auto=compress&cs=tinysrgb&w=1200"
                 alt="Aircraft"

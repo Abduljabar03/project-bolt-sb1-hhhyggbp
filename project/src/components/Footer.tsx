@@ -1,18 +1,17 @@
-import { Plane, Phone, Instagram } from 'lucide-react';
+import { Phone, Instagram } from 'lucide-react';
+import NajmLogo from '../images/Najm Logo.svg';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-gray-900 dark:bg-gray-950 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center space-x-3 mb-4">
-              <div className="bg-[rgba(131,127,250,1)] p-2 rounded-lg">
-                <Plane className="h-6 w-6 text-white" />
-              </div>
+              <img src={NajmLogo} alt="Najm Air" className="h-10 w-auto" />
               <span className="text-xl font-bold">Najm Air</span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
+            <p className="text-gray-400 dark:text-gray-500 text-sm leading-relaxed">
               A trusted aviation partner delivering safe, efficient, and world-class air transport solutions across Nigeria and the Middle East.
             </p>
           </div>
@@ -20,10 +19,10 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><a href="#home" className="text-gray-400 hover:text-[rgba(131,127,250,1)] transition-colors">Home</a></li>
-              <li><a href="#about" className="text-gray-400 hover:text-[rgba(131,127,250,1)] transition-colors">About Us</a></li>
-              <li><a href="#services" className="text-gray-400 hover:text-[rgba(131,127,250,1)] transition-colors">Services</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-[rgba(131,127,250,1)] transition-colors">Contact</a></li>
+              <li><a href="#home" className="text-gray-400 dark:text-gray-500 hover:text-[rgba(131,127,250,1)] transition-colors">Home</a></li>
+              <li><a href="#about" className="text-gray-400 dark:text-gray-500 hover:text-[rgba(131,127,250,1)] transition-colors">About Us</a></li>
+              <li><a href="#services" className="text-gray-400 dark:text-gray-500 hover:text-[rgba(131,127,250,1)] transition-colors">Services</a></li>
+              <li><a href="#contact" className="text-gray-400 dark:text-gray-500 hover:text-[rgba(131,127,250,1)] transition-colors">Contact</a></li>
             </ul>
           </div>
 
@@ -32,7 +31,7 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-5 w-5 text-[rgba(131,127,250,1)]" />
-                <span className="text-gray-400">+234 812 896 9696</span>
+                <span className="text-gray-400 dark:text-gray-500">+234 812 896 9696</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Instagram className="h-5 w-5 text-[rgba(131,127,250,1)]" />
@@ -40,7 +39,7 @@ export default function Footer() {
                   href="https://instagram.com/najmairltd"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-[rgba(131,127,250,1)] transition-colors"
+                  className="text-gray-400 dark:text-gray-500 hover:text-[rgba(131,127,250,1)] transition-colors"
                 >
                   @najmairltd
                 </a>
@@ -49,8 +48,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400 text-sm">
+        <div className="border-t dark:border-gray-800 border-gray-800 mt-8 pt-8 text-center">
+          <p className="text-gray-400 dark:text-gray-500 text-sm">
             &copy; {new Date().getFullYear()} Najm Air. All rights reserved.
           </p>
         </div>

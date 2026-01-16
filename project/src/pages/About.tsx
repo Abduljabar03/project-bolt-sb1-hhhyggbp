@@ -47,12 +47,12 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-cover bg-center relative" style={{ backgroundImage: `url(${backgroundWallpaper})` }}>
-        <div className="absolute inset-0 bg-white/50" />
+      <section className="py-20 bg-cover bg-center relative dark:bg-gray-900" style={{ backgroundImage: `url(${backgroundWallpaper})` }}>
+        <div className="absolute inset-0 bg-white/50 dark:bg-gray-950/60" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">Who We Are</h2>
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">Who We Are</h2>
+            <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               <p>
                 Najm Air is a premier charter and ACMI-focused airline dedicated to providing reliable air transport solutions across Nigeria and the Middle East. Our commitment to operational excellence and safety has positioned us as a trusted partner in the aviation industry.
               </p>
@@ -67,25 +67,25 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <div className="bg-white p-10 rounded-xl shadow-lg">
-              <div className="bg-[rgba(131,127,250,0.1)] w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-white dark:bg-gray-900 p-10 rounded-xl shadow-lg dark:shadow-gray-800">
+              <div className="bg-[rgba(131,127,250,0.1)] dark:bg-[rgba(131,127,250,0.15)] w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                 <Target className="h-8 w-8 text-[rgba(131,127,250,1)]" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Vision</h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Vision</h2>
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 To become a trusted and respected aviation partner, delivering safe, efficient, and world-class air transport solutions that exceed expectations and set industry standards.
               </p>
             </div>
 
-            <div className="bg-white p-10 rounded-xl shadow-lg">
-              <div className="bg-[rgba(131,127,250,0.1)] w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+            <div className="bg-white dark:bg-gray-900 p-10 rounded-xl shadow-lg dark:shadow-gray-800">
+              <div className="bg-[rgba(131,127,250,0.1)] dark:bg-[rgba(131,127,250,0.15)] w-16 h-16 rounded-lg flex items-center justify-center mb-6">
                 <Eye className="h-8 w-8 text-[rgba(131,127,250,1)]" />
               </div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Mission</h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">Our Mission</h2>
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                 To provide dependable charter and ACMI services through operational excellence, strict safety compliance, and customer-focused solutions that create lasting value for our clients and partners.
               </p>
             </div>
@@ -93,11 +93,11 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Core Values</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">Our Core Values</h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
               The principles that guide everything we do
             </p>
           </div>
@@ -108,17 +108,17 @@ export default function About() {
               return (
                 <div
                   key={index}
-                  className="bg-white p-8 rounded-xl border border-gray-200 hover:border-[rgba(131,127,250,1)] hover:shadow-xl transition-all"
+                  className="bg-white dark:bg-gray-800 p-8 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-[rgba(131,127,250,1)] dark:hover:border-[rgba(131,127,250,1)] hover:shadow-xl dark:hover:shadow-lg dark:hover:shadow-[rgba(131,127,250,0.3)] transition-all"
                 >
                   <div className="flex items-start space-x-4">
-                    <div className="bg-[rgba(131,127,250,0.1)] w-14 h-14 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <div className="bg-[rgba(131,127,250,0.1)] dark:bg-[rgba(131,127,250,0.15)] w-14 h-14 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Icon className="h-7 w-7 text-[rgba(131,127,250,1)]" />
                     </div>
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
                         {value.title}
                       </h3>
-                      <p className="text-gray-600 leading-relaxed">
+                      <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                         {value.description}
                       </p>
                     </div>

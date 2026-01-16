@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: najm-air
+    root: project
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run preview -- --host 0.0.0.0
+    envVars:
+      - key: NODE_ENV
+        value: production

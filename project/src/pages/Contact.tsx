@@ -63,29 +63,29 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 Get In Touch
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed mb-8">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
                 Have questions about our services or want to discuss your aviation needs? Our team is here to help. Reach out to us using any of the contact methods below or fill out the form.
               </p>
 
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
-                  <div className="bg-[rgba(131,127,250,0.1)] w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="bg-[rgba(131,127,250,0.1)] dark:bg-[rgba(131,127,250,0.15)] w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Phone className="h-6 w-6 text-[rgba(131,127,250,1)]" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
                       Phone
                     </h3>
                     <a
                       href="tel:+2348128969696"
-                      className="text-gray-700 hover:text-[rgba(131,127,250,1)] transition-colors"
+                      className="text-gray-700 dark:text-gray-300 hover:text-[rgba(131,127,250,1)] transition-colors"
                     >
                       +234 812 896 9696
                     </a>
@@ -93,18 +93,18 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-[rgba(131,127,250,0.1)] w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="bg-[rgba(131,127,250,0.1)] dark:bg-[rgba(131,127,250,0.15)] w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                     <Instagram className="h-6 w-6 text-[rgba(131,127,250,1)]" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
                       Instagram
                     </h3>
                     <a
                       href="https://instagram.com/najmairltd"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-700 hover:text-[rgba(131,127,250,1)] transition-colors"
+                      className="text-gray-700 dark:text-gray-300 hover:text-[rgba(131,127,250,1)] transition-colors"
                     >
                       @najmairltd
                     </a>
@@ -112,32 +112,32 @@ export default function Contact() {
                 </div>
 
                 <div className="flex items-start space-x-4">
-                  <div className="bg-[rgba(131,127,250,0.1)] w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="bg-[rgba(131,127,250,0.1)] dark:bg-[rgba(131,127,250,0.15)] w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0">
                     <MapPin className="h-6 w-6 text-[rgba(131,127,250,1)]" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 mb-1">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">
                       Service Areas
                     </h3>
-                    <p className="text-gray-700">
+                    <p className="text-gray-700 dark:text-gray-300">
                       Nigeria & Middle East
                     </p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-12 p-6 bg-[rgba(131,127,250,0.05)] rounded-xl">
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
+              <div className="mt-12 p-6 bg-[rgba(131,127,250,0.05)] dark:bg-[rgba(131,127,250,0.1)] rounded-xl">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                   Business Hours
                 </h3>
-                <p className="text-gray-700">
+                <p className="text-gray-700 dark:text-gray-300">
                   Available 24/7 for emergency and urgent requests
                 </p>
               </div>
             </div>
 
-            <div className="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl p-8 shadow-lg dark:shadow-gray-800">
+              <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                 Send Us a Message
               </h2>
 
@@ -145,7 +145,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
                   >
                     Full Name
                   </label>
@@ -156,7 +156,7 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgba(131,127,250,1)] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgba(131,127,250,1)] focus:border-transparent"
                     placeholder="Your name"
                   />
                 </div>
@@ -164,7 +164,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
                   >
                     Email Address
                   </label>
@@ -175,7 +175,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgba(131,127,250,1)] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgba(131,127,250,1)] focus:border-transparent"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -183,7 +183,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
                   >
                     Phone Number
                   </label>
@@ -194,7 +194,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgba(131,127,250,1)] focus:border-transparent"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgba(131,127,250,1)] focus:border-transparent"
                     placeholder="+234 XXX XXX XXXX"
                   />
                 </div>
@@ -202,7 +202,7 @@ export default function Contact() {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-semibold text-gray-700 mb-2"
+                    className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2"
                   >
                     Message
                   </label>
@@ -213,22 +213,22 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgba(131,127,250,1)] focus:border-transparent resize-none"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-[rgba(131,127,250,1)] focus:border-transparent resize-none"
                     placeholder="Tell us about your aviation needs..."
                   />
                 </div>
 
                 {submitStatus === 'success' && (
-                  <div className="p-4 bg-green-50 border border-green-200 rounded-lg">
-                    <p className="text-green-800 font-medium">
+                  <div className="p-4 bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 rounded-lg">
+                    <p className="text-green-800 dark:text-green-200 font-medium">
                       Thank you for contacting us! We'll get back to you soon.
                     </p>
                   </div>
                 )}
 
                 {submitStatus === 'error' && (
-                  <div className="p-4 bg-red-50 border border-red-200 rounded-lg">
-                    <p className="text-red-800 font-medium">
+                  <div className="p-4 bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 rounded-lg">
+                    <p className="text-red-800 dark:text-red-200 font-medium">
                       There was an error submitting your message. Please try again.
                     </p>
                   </div>
@@ -248,12 +248,12 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gray-50 dark:bg-gray-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
             Let's Discuss Your Aviation Needs
           </h2>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed">
             Whether you need charter flights, ACMI solutions, or specialized aviation services, our experienced team is ready to provide customized solutions that meet your requirements. Contact us today to start the conversation.
           </p>
         </div>

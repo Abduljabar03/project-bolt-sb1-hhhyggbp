@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ThemeProvider } from './contexts/ThemeContext';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -6,7 +7,7 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
 
-function App() {
+function AppContent() {
   const [currentPage, setCurrentPage] = useState('home');
 
   const renderPage = () => {
@@ -25,11 +26,19 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-950">
       <Navigation currentPage={currentPage} onNavigate={setCurrentPage} />
       <main>{renderPage()}</main>
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <ThemeProvider>
+      <AppContent />
+    </ThemeProvider>
   );
 }
 
