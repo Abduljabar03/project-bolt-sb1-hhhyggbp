@@ -1,10 +1,66 @@
 import { Plane, Globe, Shield, Users, ArrowRight } from 'lucide-react';
+import { useEffect, useRef } from 'react';
 
 interface HomeProps {
   onNavigate: (page: string) => void;
 }
 
 export default function Home({ onNavigate }: HomeProps) {
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+
+    const img = new Image();
+    img.crossOrigin = 'anonymous';
+    img.src = 'https://images.pexels.com/photos/62623/wing-plane-flying-airplane-62623.jpeg?auto=compress&cs=tinysrgb&w=1920';
+
+    let animationFrameId: number;
+    let frame = 0;
+    const totalFrames = 120;
+
+    const animate = () => {
+      // Calculate zoom for boomerang effect
+      const progress = (frame % totalFrames) / totalFrames;
+      const isReverse = frame >= totalFrames;
+      const adjustedProgress = isReverse ? 1 - (progress) : progress;
+      const zoom = 1 + adjustedProgress * 0.15;
+
+      // Clear canvas
+      ctx.fillStyle = 'rgba(0, 0, 0, 1)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Draw image with zoom effect
+      if (img.complete) {
+        const x = (canvas.width - (canvas.width / zoom)) / 2;
+        const y = (canvas.height - (canvas.height / zoom)) / 2;
+        const width = canvas.width / zoom;
+        const height = canvas.height / zoom;
+
+        ctx.drawImage(img, x, y, width * zoom, height * zoom);
+
+        // Apply brightness filter to match original
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+      }
+
+      frame = (frame + 1) % (totalFrames * 2);
+      animationFrameId = requestAnimationFrame(animate);
+    };
+
+    img.onload = () => {
+      animate();
+    };
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, []);
   const services = [
     {
       icon: Plane,
@@ -30,12 +86,11 @@ export default function Home({ onNavigate }: HomeProps) {
 
   return (
     <div className="pt-20">
-      <section
-        className="relative h-[600px] flex items-center justify-center bg-cover bg-center"
-        style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/62623/wing-plane-flying-airplane-62623.jpeg?auto=compress&cs=tinysrgb&w=1920)',
-        }}
-      >
+      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+        <canvas
+          ref={canvasRef}
+          className="absolute inset-0 w-full h-full"
+        />
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">

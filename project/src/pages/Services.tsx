@@ -1,4 +1,6 @@
 import { Plane, Globe, Shield, Users, CheckCircle } from 'lucide-react';
+import ckcImage from '../images/ckc.jpg';
+import kaabaImage from '../images/kaaba.jpeg';
 
 export default function Services() {
   const services = [
@@ -26,7 +28,7 @@ export default function Services() {
         'Group coordination and management',
         'Assistance with travel logistics',
       ],
-      image: 'https://images.pexels.com/photos/2026324/pexels-photo-2026324.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: kaabaImage,
     },
     {
       icon: Shield,
@@ -59,9 +61,11 @@ export default function Services() {
   return (
     <div className="pt-20">
       <section
-        className="relative h-[400px] flex items-center justify-center bg-cover bg-center"
+        className="relative h-[500px] flex items-center justify-center bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/164589/pexels-photo-164589.jpeg?auto=compress&cs=tinysrgb&w=1920)',
+          backgroundImage: `url(${ckcImage})`,
+          backgroundSize: '80%',
+          backgroundPosition: 'center',
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />

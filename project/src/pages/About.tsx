@@ -1,4 +1,5 @@
 import { Target, Eye, Award, Heart } from 'lucide-react';
+import backgroundWallpaper from '../images/backgroundwallpaper.jpeg';
 
 export default function About() {
   const values = [
@@ -26,12 +27,15 @@ export default function About() {
 
   return (
     <div className="pt-20">
-      <section
-        className="relative h-[400px] flex items-center justify-center bg-cover bg-center"
-        style={{
-          backgroundImage: 'url(https://images.pexels.com/photos/46148/aircraft-jet-landing-cloud-46148.jpeg?auto=compress&cs=tinysrgb&w=1920)',
-        }}
-      >
+      <section className="relative h-[400px] flex items-center justify-center overflow-hidden">
+        <video
+          autoPlay
+          muted
+          loop
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/aboutnajm.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/50" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
@@ -43,8 +47,9 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-20 bg-cover bg-center relative" style={{ backgroundImage: `url(${backgroundWallpaper})` }}>
+        <div className="absolute inset-0 bg-white/50" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">Who We Are</h2>
             <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
